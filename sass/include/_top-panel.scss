@@ -1,0 +1,237 @@
+.top-panel {
+  width: 100%;
+  height: 100px;
+  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #d6e2eb;
+  .logo-area {
+    @include clearfix;
+    width: 255px;
+    margin-right: 55px;
+    padding-top: 20px;
+    float: left;
+    .logo {
+      @include font-size(16px);
+      font-weight: bold;
+      color: #43688f;
+      &:before {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        content: '';
+        width: 33px;
+        height: 41px;
+        background: url(../images/spritesheet.png) no-repeat -57px -37px;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+    .description {
+      color: #535353;
+    }
+  }
+
+  .submenu {
+    width: 375px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    list-style: none;
+    box-shadow: 0 3px 1px 1px rgba(0, 0, 0, .1);
+    ul {
+      list-style: none;
+      padding: 0 0 0 17px;
+      margin-top: 5px;
+      li:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      a {
+        position: relative;
+        transition: all 0.3s linear;
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: url(../images/spritesheet.png) no-repeat -31px -37px;
+          position: absolute;
+          left: -25px;
+          top: 0;
+          opacity: 0;
+          transition: all 0.2s linear;
+        }
+        &:not(.news):hover {
+          text-decoration: underline;
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .system-nav {
+    float: left;
+    padding-top: 15px;
+    .menu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      > li {
+        padding-top: 5px;
+        display: inline-block;
+        border-top: 3px solid transparent;
+        position: relative;
+        a {
+          &:hover {
+            opacity: .7;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        &.active {
+          border-top-color: #d10015;
+          color: #333;
+        }
+        .submenu {
+          width: 260px;
+          z-index: 10;
+          top: 22px;
+          left: 0;
+        }
+        &.sub-menu::after {
+          width: 8px;
+          height: 5px;
+          display: inline-block;
+          vertical-align: middle;
+          opacity: .5;
+          content: '';
+          background: url(../images/spritesheet.png) no-repeat -37px -69px;
+        }
+        &:hover {
+          .submenu {
+            display: block;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .find {
+      margin-top: 10px;
+      .search-input {
+        width: 410px;
+        height: 28px;
+        padding: 0 0 0 15px;
+        margin-right: 10px;
+        float: left;
+        border: 1px solid #d1d1d1;
+      }
+      .btn {
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background: url(../images/spritesheet.png) no-repeat -100px -69px;
+          position: absolute;
+          top: 50%;
+          left: -35px;
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+  .user-menu {
+    height: 100%;
+    float: right;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .submenu {
+      width: 375px;
+      top: 90px;
+      right: 0;
+    }
+    > li,
+    ul > li,
+    .icon {
+      height: 100%;
+    }
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      @include font-size(13px);
+      .icon {
+        color: #838383;
+        display: inline-block;
+        transition: .4s;
+        padding: 30px 15px 0;
+        position: relative;
+        z-index: 7;
+        &::before {
+          width: 22px;
+          height: 22px;
+          content: '';
+          display: block;
+          margin: 0 auto 5px;
+          background: url(../images/spritesheet.png) no-repeat;
+        }
+        &.notice::before {
+          width: 18px;
+          background-position: -100px -37px;
+        }
+        &.nav::before {
+          background-position: -109px -5px;
+        }
+        &.reference::before {
+          background-position: -5px -69px;
+        }
+        &.doc::before {
+          width: 18px;
+          background-position: -81px -5px;
+        }
+        &.user::before {
+          background-position: -37px -95px;
+        }
+        &:hover {
+          color: #333;
+          background-color: #fff;
+          &::before {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+        }
+      }
+      &:hover ul li {
+        display: block;
+      }
+      .open {
+        + .submenu {
+          display: block;
+        }
+        &::after {
+          content: 'x';
+          position: absolute;
+          bottom: -25px;
+          right: -265px;
+          @include font-size(20px);
+          color: #a0a0a0;
+        }
+      }
+    }
+    .news {
+      background-color: #d10015;
+      color: #fff;
+      padding: 2px 4px;
+      &:hover {
+        background-color: #1869c0;
+        text-decoration: none;
+      }
+    }
+  }
+}

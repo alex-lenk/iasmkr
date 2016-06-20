@@ -1,0 +1,256 @@
+
+.wrapper-left {
+  float: left;
+  height: 100%;
+  min-width: 50% !important;;
+  max-width: 75% !important;
+  border-right: 7px solid #dbe4ed;
+  position: relative;
+  transition: all 0.3s linear;
+  &.open {
+    min-width: 26% !important;;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background-color: #529acd;
+    box-shadow: 0 6px 0 0 #529acd, 0px -6px 0 0 #529acd;
+    z-index: 5;
+  }
+  .column {
+    width: 50%;
+    min-height: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+    padding-top: 45px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    .top-block {
+      margin: -45px 0 5px;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 15px;
+      font-size: 14px;
+      font-weight: bold;
+      overflow: hidden;
+      &::before, h2::after {
+        content: '';
+        background: url(../images/spritesheet.png) no-repeat;
+        cursor: pointer;
+        transition: all 0.4s linear;
+      }
+      &::before {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        background-position: -31px -37px;
+      }
+      h2 {
+        pointer-events: none;
+        font-size: 14px;
+        display: inline;
+        &::after {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          width: 14px;
+          height: 12px;
+          pointer-events: all;
+          background-position: -31px -5px;
+        }
+      }
+    }
+  }
+  .filter-block {
+    padding-bottom: 65px;
+    background-color: #e9f0f5;
+    border-right: 1px solid #dbe4ed;
+    .top-block {
+      background-color: #dae2e7;
+    }
+    .bottom-block {
+      height: 60px;
+      width: 100%;
+      padding: 0 15px;
+      background-color: #dae2e7;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .rollup {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        background: url(../images/spritesheet.png) no-repeat 2px -29px #dcdcdc;
+        cursor: pointer;
+        @include transition(all .3s ease);
+        &:hover {
+          background-color: #fff;
+          outline-color: #fff;
+        }
+      }
+      .save {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        text-align: right;
+      }
+    }
+  }
+  .list-establishments {
+    background-color: #fff;
+    .top-block {
+      background-color: #f5f9fc;
+    }
+  }
+  &.filter-hide .filter-block,
+  &.establishments-hide .list-establishments {
+    width: 45px;
+    .top-block {
+      &::before {
+        visibility: hidden;
+        transition: all 0.2s linear;
+      }
+      span::after {
+        background-position: -5px -105px;
+      }
+    }
+    .scroll-container {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &.establishments-hide {
+    .filter-block {
+      width: calc(100% - 45px);
+    }
+    .list-establishments {
+      background-color: #f5f9fc;
+    }
+  }
+  &.filter-hide {
+    .list-establishments {
+      width: calc(100% - 45px);
+    }
+    .filter-block {
+      background-color: #dae2e7;
+    }
+    .bottom-block {
+      opacity: 0;
+    }
+  }
+  &.filter-hide.establishments-hide {
+    width: 98px !important;
+    min-width: 98px !important;
+    .filter-block,
+    .list-establishments {
+      width: 45px;
+    }
+    + .wrapper-right {
+      max-width: 100%;
+      margin-left: -100px;
+      padding-left: 100px;
+      float: left;
+    }
+  }
+}
+
+.menu-establishments {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  li {
+    padding: 3px 5px;
+    cursor: pointer;
+    @include transition(all .3s ease);
+    &.active,
+    &:hover {
+      background-color: #b9b9b9;
+      color: #fff;
+    }
+    &.active {
+      cursor: default;
+    }
+  }
+}
+
+.select-box {
+  color: #717171;
+  padding: 5px 0 10px;
+  margin: 0 15px 10px;
+  .name-list {
+    display: inline-block;
+    margin-bottom: 5px;
+    cursor: default;
+  }
+
+}
+
+.select-list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #f0f0f0;
+  outline: 1px solid #d1d1d1;
+  position: relative;
+  background-color: #fff;
+  @include transition(outline-color .3s ease);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 8px;
+    height: 5px;
+    background: url(../images/spritesheet.png) no-repeat -37px -69px;
+    opacity: .5;
+  }
+  &:hover {
+    outline-color: #333333;
+  }
+  li {
+    color: #111111;
+    font-size: 0;
+    padding: 0;
+    cursor: pointer;
+    @include transition(all .3s ease);
+    &.default {
+      padding: 5px;
+      @include font-size(13px);
+      color: #bab9b9;
+    }
+  }
+  &.open {
+    li {
+      @include font-size(13px);
+      padding: 5px;
+      &.value {
+        &:hover {
+          background-color: #b9b9b9;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.filter-set {
+  border-bottom: 1px solid #d1d1d1;
+  .label-block {
+
+  }
+}
+

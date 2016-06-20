@@ -1,0 +1,29 @@
+/* ==========================================================================
+   table styles
+   ========================================================================== */
+.table-area {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  .td {
+    padding: 10px 15px;
+    display: table-cell;
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+.table-head {
+  display: table-header-group;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-body {
+  display: table-row-group;
+}
+
+.table-footer {
+  display: table-footer-group;
+}
