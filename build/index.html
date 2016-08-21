@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ИАС МКР города Москвы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    
+    <link rel="stylesheet" href="css/selectize.css">
+    
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<header class="top-panel">
+    <div class="logo-area">
+        <a href="#" class="logo">ИАС МКР города Москвы</a>
+        <div class="description">Мониторинг государственных учреждений города Москвы</div>
+    </div>
+    <div class="system-nav">
+        <ul class="menu">
+            <li><a href="#">Новости</a></li>
+            <li class="active"><span>Паспорт ГУ</span></li>
+            <li class="sub-menu">
+                <a href="#">Отчеты</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">Главная</a>
+                        <ul>
+                            <li><a href="#" class="news">Новости</a></li>
+                            <li>
+                                <span>Данные</span>
+                                <ul class="level-4">
+                                    <li><a href="#">Адресные перечни</a></li>
+                                    <li><a href="#">Объекты</a></li>
+                                    <li><a href="#">Карта города</a></li>
+                                    <li><a href="#">Тендеры</a></li>
+                                    <li><a href="#">Контракты</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>Управление</span>
+                                <ul>
+                                    <li><a href="#">Редактор показателей</a></li>
+                                    <li><a href="#">Конструктор шапок</a></li>
+                                    <li><a href="#">Редактор колонок</a></li>
+                                    <li><a href="#">Конструктор отчетов</a></li>
+                                    <li><a href="#">Отложенные расчеты</a></li>
+                                    <li><a href="#">Конструктор боковиков</a></li>
+                                    <li><a href="#">История расчетов</a></li>
+                                    <li><a href="#">Редактор классификатора</a></li>
+                                    <li><a href="#">Показатели здоровья системы</a></li>
+                                </ul>
+                            </li>
+                            <li><span>Аналитика</span>
+                                <ul>
+                                    <li><a href="#">Отчеты</a></li>
+                                    <li><a href="#">Контрольный отчет</a></li>
+                                    <li><a href="#">Программа модернизации</a></li>
+                                    <li><a href="#">Отчетность</a></li>
+                                    <li><a href="#">Планирование бюджета</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Презентация</a></li>
+            <li><a href="#">Конструктор</a></li>
+            <li><a href="#">Книга</a></li>
+        </ul>
+        <form action="/" class="find">
+            <input type="search" class="search-input" placeholder="Быстрый поиск государственного учреждения">
+            <button type="button" class="btn btn-blue">Найти</button>
+        </form>
+    </div>
+
+    <ul class="user-menu">
+        <li>
+            <a href="#" class="icon notice">Уведомления</a>
+        </li>
+        <li>
+            <a href="#" class="icon nav sub-menu">Навигация</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Главная</a>
+                    <ul>
+                        <li><a href="#" class="news">Новости</a></li>
+                        <li>
+                            <span>Данные</span>
+                            <ul class="level-4">
+                                <li><a href="#">Адресные перечни</a></li>
+                                <li><a href="#">Объекты</a></li>
+                                <li><a href="#">Карта города</a></li>
+                                <li><a href="#">Тендеры</a></li>
+                                <li><a href="#">Контракты</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Управление</span>
+                            <ul>
+                                <li><a href="#">Редактор показателей</a></li>
+                                <li><a href="#">Конструктор шапок</a></li>
+                                <li><a href="#">Редактор колонок</a></li>
+                                <li><a href="#">Конструктор отчетов</a></li>
+                                <li><a href="#">Отложенные расчеты</a></li>
+                                <li><a href="#">Конструктор боковиков</a></li>
+                                <li><a href="#">История расчетов</a></li>
+                                <li><a href="#">Редактор классификатора</a></li>
+                                <li><a href="#">Показатели здоровья системы</a></li>
+                            </ul>
+                        </li>
+                        <li><span>Аналитика</span>
+                            <ul>
+                                <li><a href="#">Отчеты</a></li>
+                                <li><a href="#">Контрольный отчет</a></li>
+                                <li><a href="#">Программа модернизации</a></li>
+                                <li><a href="#">Отчетность</a></li>
+                                <li><a href="#">Планирование бюджета</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="icon reference">Справка</a>
+        </li>
+        <li>
+            <a href="#" class="icon doc">Документы</a>
+        </li>
+        <li>
+            <a href="#" class="icon user">User Login</a>
+        </li>
+    </ul>
+</header>
+
+<div class="wrapper">
+    <div class="wrapper-left">
+        <section class="column filter-block">
+            <div class="top-block">
+                <h2 id="fold-filter" title="Скрыть/Закрыть колонку">фильтр</h2>
+            </div>
+            <div class="scroll-container">
+                <select placeholder="Не выбрано">
+                    <option value="">Не выбрано</option>
+                    <option value="1">Chuck Testa</option>
+                    <option value="4">Sage Cattabriga-Alosa</option>
+                    <option value="3">Nikola Tesla</option>
+                </select>
+            </div>
+            <div class="bottom-block">
+                <button type="button" class="btn btn-blue">Применить</button>
+                <div class="rollup" data-toggle="tooltip" title="Сбросить фильтр"></div>
+                <div class="save">
+                    <button type="button" class="btn btn-light">Сохранить</button>
+                </div>
+            </div>
+        </section>
+        <section class="column list-establishments">
+            <div class="top-block">
+                <h2 id="fold-list" title="Скрыть/Закрыть колонку">Список учреждений</h2>
+            </div>
+            <div class="scroll-container">
+                <ul class="menu-establishments">
+                    <li>ГБУК г. Москвы "МДТ им. А.С. Пушкина"</li>
+                    <li>ГАУК г. Москвы "ПКиО "Бабушкинский"</li>
+                    <li>ГБУК г. Москвы "МАМТ"</li>
+                    <li>ГБУК г. Москвы "Московский академический театр им. Вл. Маяковского"</li>
+                    <li>ГБУК г. Москвы "Московский государственный театр "Ленком"</li>
+                    <li>ГБУК г. Москвы "Московский театр п/р О.Табакова"</li>
+                    <li>ГБУК г. Москвы "ММТ "Геликон-опера"</li>
+                    <li>ГБУК МТ "Новая Опера" им.Е.В.Колобова</li>
+                    <li>Московский объединенный музей-заповедник</li>
+                    <li>ГБУК "МГАТО"</li>
+                    <li>ГАУК г. Москвы МГС "Эрмитаж"</li>
+                    <li>"Московский театр "Современник"</li>
+                    <li>ГАУК г. Москвы "Культурный центр ЗИЛ"</li>
+                    <li>ГБУК г. Москвы "МТКЦ Павла Слободкина"</li>
+                    <li>ГБУК г.Москвы "Театр им. Моссовета"</li>
+                    <li>ГБУК г. Москвы "ЦКД "Зеленоград"</li>
+                    <li>ГАУК г.Москвы "Измайловский ПКиО"</li>
+                    <li class="active">ЦПКиО им. М. Горького</li>
+                    <li>ГБУК ГДМ</li>
+                    <li>ГБУК г. Москвы "Москонцерт"</li>
+                    <li>ГБУК г. Москвы "Виртуозы Москвы"</li>
+                    <li>ГБУК г. Москвы "Культурный центр "Москвич"</li>
+                    <li>ГБУК г. Москвы "Московский академический театр сатиры"</li>
+                    <li>ГБУК г. Москвы "ГМЗ "Царицыно"</li>
+                    <li>Московский государственный институт музыки имени&nbsp;</li>
+                    <li>А. Г. Шнитке</li>
+                    <li>ГБОУ СПО г. Москвы "МТК при ГБУК г. Москвы "Московский театр под руководством О.Табакова"</li>
+                    <li>&nbsp;</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="wrapper-right">
+        <div class="top-head">
+            <div class="title">ЦПКиО им. М. Горького</div>
+            <ul class="settings">
+                <li><a href="#">История</a></li>
+                <li><a href="#">Экспорт</a></li>
+            </ul>
+        </div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li><span data-target="#item" aria-controls="item" role="tab" data-toggle="tab">Информация</span></li>
+            <li><span data-target="#item-2" aria-controls="item-2" role="tab" data-toggle="tab">Имущество</span></li>
+            <li><span data-target="#item-3" aria-controls="item-3" role="tab" data-toggle="tab">ФХД</span></li>
+            <li><span data-target="#item-4" aria-controls="item-4" role="tab" data-toggle="tab">Госзадания</span></li>
+            <li><span data-target="#item-5" aria-controls="item-5" role="tab" data-toggle="tab">Зарплата</span></li>
+            <li><span data-target="#item-6" aria-controls="item-6" role="tab" data-toggle="tab">Контрактация</span></li>
+            <li class="active"><span data-target="#item-7" aria-controls="item-7" role="tab" data-toggle="tab">Эффективность</span>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="item">1</div>
+            <div role="tabpanel" class="tab-pane" id="item-2">2</div>
+            <div role="tabpanel" class="tab-pane" id="item-3">3</div>
+            <div role="tabpanel" class="tab-pane" id="item-4">4</div>
+            <div role="tabpanel" class="tab-pane" id="item-5">5</div>
+            <div role="tabpanel" class="tab-pane" id="item-6">6</div>
+            <div role="tabpanel" class="tab-pane active" id="item-7">
+                <div class="period">Период: 4 квартал 2013; Дата: 14.10.2014</div>
+                <div class="table-area">
+                    <div class="table-head">
+                        <span class="td">Направление</span>
+                        <span class="td">Место</span>
+                        <span class="td">Рейтинг</span>
+                    </div>
+                    <div class="table-body">
+                        <div class="total table-row">
+                            <span class="td">Итоговое значение</span>
+                            <span class="td">10</span>
+                            <span class="td">14,2</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">Финансовый/операционный менеджмент</span>
+                                </label>
+                            </span>
+                            <span class="td down">4</span>
+                            <span class="td">10,8</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">Управление закупками</span>
+                                </label>
+                            </span>
+                            <span class="td">16</span>
+                            <span class="td">7,2</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">Управление имуществом</span>
+                                </label>
+                            </span>
+                            <span class="td up">7</span>
+                            <span class="td">23</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">Управление персоналом</span>
+                                </label>
+                            </span>
+                            <span class="td up">12</span>
+                            <span class="td">6</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">Раскрытие информации</span>
+                                </label>
+                            </span>
+                            <span class="td">8</span>
+                            <span class="td">11,3</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="td">
+                                <label class="label-block">
+                                    <input type="checkbox" class="checkbox-custom">
+                                    <span class="checkbox-custom-view label">
+                                        Деятельность, приносящая доход, и другие <br>
+                                        негосударственные источники доходов</span>
+                                </label>
+                            </span>
+                            <span class="td">1</span>
+                            <span class="td">21</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/selectize.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

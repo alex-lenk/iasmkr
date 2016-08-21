@@ -1,0 +1,33 @@
+{
+  "name": "iasmkr",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "",
+    "gulp": "",
+    "gulp-autoprefixer": "",
+    "gulp-imagemin": "1",
+    "clean-css": "",
+    "gulp-rigger": "",
+    "gulp-sass": "",
+    "gulp-sourcemaps": "",
+    "gulp-uglify": "",
+    "gulp-watch": "",
+    "imagemin-pngquant": "",
+    "rimraf": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-lenk/iasmkr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alex-lenk/iasmkr/issues"
+  },
+  "homepage": "https://github.com/alex-lenk/iasmkr#readme"
+}
