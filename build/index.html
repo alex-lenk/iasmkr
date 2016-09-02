@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <title>ИАС МКР города Москвы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/jquery-ui.structure.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    
-    
     <link rel="stylesheet" href="css/selectize.css">
-    
     <link rel="stylesheet" href="css/styles.min.css">
+    -->
 </head>
 <body>
+<!--
+
+
+<div class="wrapper">
+</div>
+-->
+
 <header class="top-panel">
     <div class="logo-area">
         <a href="#" class="logo">ИАС МКР города Москвы</a>
@@ -139,6 +150,7 @@
     </ul>
 </header>
 
+
 <div class="wrapper">
     <div class="wrapper-left">
         <section class="column filter-block">
@@ -199,6 +211,7 @@
             </div>
         </section>
     </div>
+
     <div class="wrapper-right">
         <div class="top-head">
             <div class="title">ЦПКиО им. М. Горького</div>
@@ -207,6 +220,7 @@
                 <li><a href="#">Экспорт</a></li>
             </ul>
         </div>
+    
         <ul class="nav nav-tabs" role="tablist">
             <li><span data-target="#item" aria-controls="item" role="tab" data-toggle="tab">Информация</span></li>
             <li><span data-target="#item-2" aria-controls="item-2" role="tab" data-toggle="tab">Имущество</span></li>
@@ -214,107 +228,121 @@
             <li><span data-target="#item-4" aria-controls="item-4" role="tab" data-toggle="tab">Госзадания</span></li>
             <li><span data-target="#item-5" aria-controls="item-5" role="tab" data-toggle="tab">Зарплата</span></li>
             <li><span data-target="#item-6" aria-controls="item-6" role="tab" data-toggle="tab">Контрактация</span></li>
-            <li class="active"><span data-target="#item-7" aria-controls="item-7" role="tab" data-toggle="tab">Эффективность</span>
+            <li class="active"><span data-target="#item-7" aria-controls="item-7" role="tab"
+                                     data-toggle="tab">Эффективность</span>
             </li>
         </ul>
-
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane" id="item">1</div>
-            <div role="tabpanel" class="tab-pane" id="item-2">2</div>
-            <div role="tabpanel" class="tab-pane" id="item-3">3</div>
-            <div role="tabpanel" class="tab-pane" id="item-4">4</div>
-            <div role="tabpanel" class="tab-pane" id="item-5">5</div>
-            <div role="tabpanel" class="tab-pane" id="item-6">6</div>
-            <div role="tabpanel" class="tab-pane active" id="item-7">
-                <div class="period">Период: 4 квартал 2013; Дата: 14.10.2014</div>
-                <div class="table-area">
-                    <div class="table-head">
-                        <span class="td">Направление</span>
-                        <span class="td">Место</span>
-                        <span class="td">Рейтинг</span>
-                    </div>
-                    <div class="table-body">
-                        <div class="total table-row">
-                            <span class="td">Итоговое значение</span>
-                            <span class="td">10</span>
-                            <span class="td">14,2</span>
+    
+        <div class="scroll-container">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="item">1</div>
+                <div role="tabpanel" class="tab-pane" id="item-2">2</div>
+                <div role="tabpanel" class="tab-pane" id="item-3">3</div>
+                <div role="tabpanel" class="tab-pane" id="item-4">4</div>
+                <div role="tabpanel" class="tab-pane" id="item-5">5</div>
+                <div role="tabpanel" class="tab-pane" id="item-6">6</div>
+                <div role="tabpanel" class="tab-pane active" id="item-7">
+                    <div class="period">Период: 4 квартал 2013; Дата: 14.10.2014</div>
+                    <div class="table-area">
+                        <div class="table-head">
+                            <span class="td">Направление</span>
+                            <span class="td">Место</span>
+                            <span class="td">Рейтинг</span>
                         </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">Финансовый/операционный менеджмент</span>
-                                </label>
-                            </span>
-                            <span class="td down">4</span>
-                            <span class="td">10,8</span>
-                        </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">Управление закупками</span>
-                                </label>
-                            </span>
-                            <span class="td">16</span>
-                            <span class="td">7,2</span>
-                        </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">Управление имуществом</span>
-                                </label>
-                            </span>
-                            <span class="td up">7</span>
-                            <span class="td">23</span>
-                        </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">Управление персоналом</span>
-                                </label>
-                            </span>
-                            <span class="td up">12</span>
-                            <span class="td">6</span>
-                        </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">Раскрытие информации</span>
-                                </label>
-                            </span>
-                            <span class="td">8</span>
-                            <span class="td">11,3</span>
-                        </div>
-                        <div class="table-row">
-                            <span class="td">
-                                <label class="label-block">
-                                    <input type="checkbox" class="checkbox-custom">
-                                    <span class="checkbox-custom-view label">
-                                        Деятельность, приносящая доход, и другие <br>
-                                        негосударственные источники доходов</span>
-                                </label>
-                            </span>
-                            <span class="td">1</span>
-                            <span class="td">21</span>
+                        <div class="table-body">
+                            <div class="total table-row">
+                                <span class="td">Итоговое значение</span>
+                                <span class="td">10</span>
+                                <span class="td">14,2</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">Финансовый/операционный менеджмент</span>
+                                    </label>
+                                </span>
+                                <span class="td down">4</span>
+                                <span class="td">10,8</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">Управление закупками</span>
+                                    </label>
+                                </span>
+                                <span class="td">16</span>
+                                <span class="td">7,2</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">Управление имуществом</span>
+                                    </label>
+                                </span>
+                                <span class="td up">7</span>
+                                <span class="td">23</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">Управление персоналом</span>
+                                    </label>
+                                </span>
+                                <span class="td up">12</span>
+                                <span class="td">6</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">Раскрытие информации</span>
+                                    </label>
+                                </span>
+                                <span class="td">8</span>
+                                <span class="td">11,3</span>
+                            </div>
+                            <div class="table-row">
+                                <span class="td">
+                                    <label class="label-block">
+                                        <input type="checkbox" class="checkbox-custom">
+                                        <span class="checkbox-custom-view label">
+                                            Деятельность, приносящая доход, и другие <br>
+                                            негосударственные источники доходов</span>
+                                    </label>
+                                </span>
+                                <span class="td">1</span>
+                                <span class="td">21</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+
+</script>
+
+<!--
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/selectize.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/scripts.js"></script>
+-->
 
 </body>
 </html>

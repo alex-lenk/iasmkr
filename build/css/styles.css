@@ -1,14 +1,3 @@
-/* The introduction of external libraries */
-/*
-@import "../../bower_components/normalize-css/normalize.css";
-@import "include/reboot";
-@import "../../bower_components/lib/css/bootstrap.css";
-@import "../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css";
-@import "../../bower_components/lib/css/jquery-ui.structure.css";
-
-//@import "../../bower_components/lib/css/selectize.css";
-*/
-/* Styles project */
 .checkbox-custom {
   display: none;
 }
@@ -54,12 +43,17 @@
 }
 
 .nav-tabs {
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  top: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  overflow: hidden;
 }
 
 .nav-tabs li {
@@ -522,54 +516,6 @@ a {
   text-decoration: none;
 }
 
-.mCSB_scrollTools .mCSB_draggerContainer {
-  background-color: #f5f9fc;
-}
-
-.mCSB_inside > .mCSB_container {
-  margin-right: 20px;
-}
-
-.mCSB_container {
-  height: 100%;
-}
-
-.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: #b8c8d9;
-  background-color: rgba(184, 200, 217, 0.75);
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-}
-
-.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  width: 11px;
-}
-
-.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
-  background-color: #b8c8d9;
-}
-
-.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
-  background-color: transparent;
-}
-
-.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
-  background-color: #b8c8d9;
-}
-
-.mCSB_dragger_bar:before {
-  width: 5px;
-  height: 2px;
-  content: '';
-  background-color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 3px;
-  margin-top: -1px;
-  box-shadow: 0 4px 0 #fff, 0 -4px 0 #fff;
-}
-
 .wrapper-left {
   float: left;
   height: 100%;
@@ -606,6 +552,7 @@ a {
   padding-top: 45px;
   overflow: hidden;
   transition: all 0.3s linear;
+  z-index: 2;
 }
 
 .wrapper-left .column .top-block {
@@ -872,18 +819,21 @@ a {
   width: 100%;
   min-width: 25%;
   height: 100%;
+  padding-top: 82px;
   float: right;
   background-color: #f5f9fc;
+  position: relative;
+  z-index: 1;
 }
 
 .wrapper-right .top-head {
+  width: 100%;
+  height: 40px;
   padding: 10px 15px;
-}
-
-.wrapper-right .top-head:after {
-  display: table;
-  clear: both;
-  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .wrapper-right .top-head .title {
@@ -924,6 +874,12 @@ a {
 
 .wrapper-right .tab-pane {
   padding: 30px;
+}
+
+.wrapper-right .mCustomScrollBox {
+  background-color: #fff;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
 }
 
 .wrapper-right .period {
@@ -989,4 +945,52 @@ a {
   border-left: 2px solid #fff;
   color: #000;
   font-weight: normal;
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #f5f9fc;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 20px;
+}
+
+/*
+.mCSB_container {
+  height: 100%;
+}*/
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #b8c8d9;
+  background-color: rgba(184, 200, 217, 0.75);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 11px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #b8c8d9;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #b8c8d9;
+}
+
+.mCSB_dragger_bar:before {
+  width: 5px;
+  height: 2px;
+  content: '';
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  margin-top: -1px;
+  box-shadow: 0 4px 0 #fff, 0 -4px 0 #fff;
 }

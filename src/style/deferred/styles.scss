@@ -1,0 +1,23 @@
+@import "include/mixin";
+
+/* The introduction of external libraries */
+/*
+@import "../../bower_components/normalize-css/normalize.css";
+@import "include/reboot";
+@import "../../bower_components/lib/css/bootstrap.css";
+@import "../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css";
+@import "../../bower_components/lib/css/jquery-ui.structure.css";
+
+//@import "../../bower_components/lib/css/selectize.css";
+*/
+
+/* Styles project */
+@import "include/checkbox-custom";
+@import "include/tabs";
+@import "include/tables";
+@import "include/common";
+@import "include/top-panel";
+@import "include/scroll";
+@import "include/wrapper-left";
+@import "include/wrapper-right";
+

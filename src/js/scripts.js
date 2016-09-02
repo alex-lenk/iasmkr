@@ -1,17 +1,29 @@
-!function () {
+(function ($) {
     $(window).load(function () {
-        $(".scroll-container").mCustomScrollbar({theme: "dark-thick", setHeight: "100%"})
-    })
-}(jQuery), $("#fold-filter").click(function () {
-    $(".wrapper-left").toggleClass("filter-hide open")
-}), $("#fold-list").click(function () {
-    $(".wrapper-left").toggleClass("establishments-hide open")
-}), $(".user-menu .sub-menu").click(function () {
-    $(".user-menu .sub-menu").toggleClass("open")
-}), $(document).ready(function () {
-    $("select").selectize({create: !0, sortField: "text"}), $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $(".scroll-container").mCustomScrollbar({
+            theme: "dark-thick",
+            setHeight: "100%"
+        });
     });
+})(jQuery);
+
+$(document).ready(function () {
+    $("#fold-filter").click(function () {
+        $(".wrapper-left").toggleClass("filter-hide open")
+    });
+    $("#fold-list").click(function () {
+        $(".wrapper-left").toggleClass("establishments-hide open")
+    });
+    $(".user-menu .sub-menu").click(function () {
+        $(".user-menu .sub-menu").toggleClass("open")
+    });
+
+    /*
+    $("select").selectize({create: !0, sortField: "text"}),
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });*/
+
     var e = $(".wrapper"), t = 1, i = $(".wrapper-left");
     i.css("width", 50 / t + "%");
     var n;

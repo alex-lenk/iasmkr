@@ -22,7 +22,6 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.10",
-    "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-newer": "^1.2.0",
     "gulp-plumber": "^1.1.0",
@@ -32,8 +31,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.8",
-    "gulp-zip": "^3.2.0",
-    "ncp": "^2.0.0"
+    "gulp-zip": "^3.2.0"
   }
 }
