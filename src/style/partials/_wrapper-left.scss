@@ -1,28 +1,22 @@
 .wrapper-left {
   position: relative;
   transition: all 0.3s linear;
-  z-index: 3;
+  z-index: 3;    height: 100%;
+  min-width: 50% !important;;
+  max-width: 75% !important;
+  border-right: 7px solid #dbe4ed;
   @include clearfix;
-  @include from('xl') {
-    height: 100%;
-    min-width: 50% !important;;
-    max-width: 75% !important;
-    border-right: 7px solid #dbe4ed;
-    &::before {
-      content: '';
-      position: absolute;
-      right: -5px;
-      top: 50%;
-      border-radius: 50%;
-      width: 3px;
-      height: 3px;
-      background-color: #529acd;
-      box-shadow: 0 6px 0 0 #529acd, 0px -6px 0 0 #529acd;
-      z-index: 5;
-    }
-  }
-  @include to('l') {
-    width: 100% !important;
+  &::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background-color: #529acd;
+    box-shadow: 0 6px 0 0 #529acd, 0px -6px 0 0 #529acd;
+    z-index: 5;
   }
   &.open {
     min-width: 26% !important;;
@@ -280,8 +274,4 @@
 
 .filter-set {
   border-bottom: 1px solid #d1d1d1;
-  .label-block {
-
-  }
 }
-

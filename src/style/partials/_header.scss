@@ -157,11 +157,6 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    @include between('m','l') {
-      .item {
-        display: none;
-      }
-    }
     .submenu {
       width: 362px;
       top: 80px;
