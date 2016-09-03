@@ -1,9 +1,12 @@
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
 @import "partials/mixin";
 @import "partials/checkbox-custom";
 @import "partials/tabs";
 @import "partials/tables";
 @import "partials/common";
-@import "partials/top-panel";
+@import "partials/scroll";
+@import "partials/tooltips";
+@import "partials/header";
 @import "partials/wrapper-left";
 @import "partials/wrapper-right";
-@import "partials/scroll";

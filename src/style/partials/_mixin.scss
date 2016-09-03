@@ -17,13 +17,6 @@
   transition: $args;
 }
 
-//@include size(100px);
-//@include size(100px, 50px);
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-
 //@include fader(hide);
 //@include fader(show);
 @mixin fader($status) {
@@ -35,22 +28,6 @@
     visibility: visible;
     opacity: 1;
     transition: visibility 0.3s, opacity 0.3s;
-  }
-}
-
-//@include link(white, blue, green, red);
-@mixin linx($link, $visit, $hover, $active) {
-  a {
-    color: $link;
-    &:visited {
-      color: $visit;
-    }
-    &:hover {
-      color: $hover;
-    }
-    &:active {
-      color: $active;
-    }
   }
 }
 

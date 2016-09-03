@@ -13,8 +13,8 @@
 
 <header class="top-panel">
     <div class="logo-area">
-        <a href="#" class="logo">ИАС МКР города Москвы</a>
-        <div class="description">Мониторинг государственных учреждений города Москвы</div>
+        <a href="#" class="logo"><span class="hide-m">ИАС МКР города Москвы</span></a>
+        <div class="description hide-m">Мониторинг государственных учреждений города Москвы</div>
     </div>
     <div class="system-nav">
         <ul class="menu">
@@ -76,11 +76,11 @@
 
     <ul class="user-menu">
         <li>
-            <a href="#" class="icon notice">Уведомления</a>
+            <a href="#" class="icon notice"><span class="item">Уведомления</span></a>
         </li>
         <li>
-            <a href="#" class="icon nav sub-menu">Навигация</a>
-            <ul class="submenu">
+            <a href="#" class="icon nav sub-menu"><span class="item">Навигация</span></a>
+            <ul class="submenu scroll-container">
                 <li>
                     <a href="#">Главная</a>
                     <ul>
@@ -123,22 +123,23 @@
             </ul>
         </li>
         <li>
-            <a href="#" class="icon reference">Справка</a>
+            <a href="#" class="icon reference"><span class="item">Справка</span></a>
         </li>
         <li>
-            <a href="#" class="icon doc">Документы</a>
+            <a href="#" class="icon doc"><span class="item">Документы</span></a>
         </li>
         <li>
-            <a href="#" class="icon user">User Login</a>
+            <a href="#" class="icon user"><span class="item">User Login</span></a>
         </li>
     </ul>
 </header>
-
 <div class="wrapper">
     <div class="wrapper-left">
         <section class="column filter-block">
             <div class="top-block">
-                <h2 id="fold-filter" title="Скрыть/Закрыть колонку">фильтр</h2>
+                <h2 id="fold-filter" title="Скрыть/Закрыть колонку">
+                    <span>фильтр</span>
+                </h2>
             </div>
             <div class="scroll-container">
                 <select placeholder="Не выбрано">
@@ -158,9 +159,12 @@
         </section>
         <section class="column list-establishments">
             <div class="top-block">
-                <h2 id="fold-list" title="Скрыть/Закрыть колонку">Список учреждений</h2>
+                <h2 id="fold-list" title="Скрыть/Закрыть колонку">
+                    <span>Список учреждений</span>
+                </h2>
             </div>
             <div class="scroll-container">
+    
                 <ul class="menu-establishments">
                     <li>ГБУК г. Москвы "МДТ им. А.С. Пушкина"</li>
                     <li>ГАУК г. Москвы "ПКиО "Бабушкинский"</li>
@@ -194,7 +198,6 @@
             </div>
         </section>
     </div>
-
     <div class="wrapper-right">
         <div class="top-head">
             <div class="title">ЦПКиО им. М. Горького</div>
@@ -306,7 +309,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <script src="js/jquery-2.2.3.min.js"></script>

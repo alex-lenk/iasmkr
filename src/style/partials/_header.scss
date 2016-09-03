@@ -4,14 +4,16 @@
   padding: 0 15px;
   position: absolute;
   top: 0;
+  display: flex;
+  justify-content: space-between;
   background-color: #f3f3f3;
   border-bottom: 1px solid #d6e2eb;
   .logo-area {
     @include clearfix;
-    width: 255px;
-    margin-right: 55px;
     padding-top: 20px;
-    float: left;
+    @include from('xl') {
+      width: 255px;
+    }
     .logo {
       @include font-size(16px);
       font-weight: bold;
@@ -73,17 +75,18 @@
     }
   }
   .system-nav {
-    float: left;
-    padding-top: 15px;
+    padding: 15px 15px 0;
     .menu {
       margin: 0;
       padding: 0;
       list-style: none;
+      display: flex;
+      justify-content: space-between;
       > li {
         padding-top: 5px;
-        display: inline-block;
         border-top: 3px solid transparent;
         position: relative;
+        white-space: nowrap;
         a {
           &:hover {
             opacity: .7;
@@ -123,6 +126,7 @@
     }
     .find {
       margin-top: 10px;
+      display: flex;
       .search-input {
         width: 410px;
         height: 28px;
@@ -147,24 +151,27 @@
   }
   .user-menu {
     height: 100%;
-    float: right;
     position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    @include between('m','l') {
+      .item {
+        display: none;
+      }
+    }
     .submenu {
-      width: 375px;
-      top: 90px;
+      width: 362px;
+      top: 80px;
       right: 0;
     }
-    > li,
-    ul > li,
-    .icon {
+    > li, ul > li, .icon {
       height: 100%;
     }
     > li {
-      display: inline-block;
-      vertical-align: top;
+      text-align: center;
       @include font-size(13px);
       .icon {
         color: #838383;
@@ -211,16 +218,22 @@
         display: block;
       }
       .open {
+        z-index: 10;
+        background-color: #fff;
         + .submenu {
+          min-height: 320px;
+          z-index: 9;
           display: block;
+          padding-top: 30px;
         }
         &::after {
-          content: 'x';
+          width: 10px;
+          height: 10px;
+          content: '';
           position: absolute;
-          bottom: -25px;
-          right: -265px;
-          @include font-size(20px);
-          color: #a0a0a0;
+          bottom: 0;
+          right: -252px;
+          background: url(../img/spritesheet.png) -36px -81px no-repeat;
         }
       }
     }
