@@ -713,11 +713,12 @@ input[type="search"] {
   padding: 15px;
   list-style: none;
   box-shadow: 0 3px 1px 1px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .top-panel .submenu ul {
   list-style: none;
-  padding: 0 0 0 17px;
+  padding: 0;
   margin-top: 5px;
 }
 
@@ -726,6 +727,7 @@ input[type="search"] {
 }
 
 .top-panel .submenu ul a {
+  padding-left: 25px;
   position: relative;
   transition: all 0.3s linear;
 }
@@ -736,7 +738,7 @@ input[type="search"] {
   height: 16px;
   background: url(../img/spritesheet.png) no-repeat -31px -37px;
   position: absolute;
-  left: -25px;
+  left: 0;
   top: 0;
   opacity: 0;
   transition: all 0.2s linear;
@@ -928,8 +930,8 @@ input[type="search"] {
   height: 10px;
   content: '';
   position: absolute;
-  bottom: 0;
-  right: -252px;
+  bottom: -5px;
+  right: -255px;
   background: url(../img/spritesheet.png) -36px -81px no-repeat;
 }
 
