@@ -4,4 +4,6 @@ iasmkr
 old
 idea
 .idea
-*.idea
+/.idea
+.idea/
+ui_concept.psd
