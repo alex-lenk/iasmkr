@@ -1,7 +1,8 @@
 .wrapper-left {
   position: relative;
   transition: all 0.3s linear;
-  z-index: 3;    height: 100%;
+  z-index: 3;
+  height: 100%;
   min-width: 50% !important;;
   max-width: 75% !important;
   border-right: 7px solid #dbe4ed;
@@ -217,61 +218,33 @@
   padding: 5px 0 10px;
   margin: 0 15px 10px;
   .name-list {
-    display: inline-block;
-    margin-bottom: 5px;
-    cursor: default;
-  }
-
-}
-
-.select-list {
-  margin: 0 0 10px;
-  padding: 0;
-  list-style: none;
-  border: 1px solid #f0f0f0;
-  outline: 1px solid #d1d1d1;
-  position: relative;
-  background-color: #fff;
-  @include transition(outline-color .3s ease);
-  &::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    width: 8px;
-    height: 5px;
-    background: url(../img/spritesheet.png) no-repeat -37px -69px;
-    opacity: .5;
-  }
-  &:hover {
-    outline-color: #333333;
-  }
-  li {
-    color: #111111;
-    font-size: 0;
-    padding: 0;
-    cursor: pointer;
-    @include transition(all .3s ease);
-    &.default {
-      padding: 5px;
-      @include font-size(13px);
-      color: #bab9b9;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    .label-block {
+      position: absolute;
+      left: 0;
+      top: 18px;
     }
   }
-  &.open {
-    li {
-      @include font-size(13px);
-      padding: 5px;
-      &.value {
-        &:hover {
-          background-color: #b9b9b9;
-          color: #fff;
-        }
-      }
+  .name {
+    &:after {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 2px;
+      height: 2px;
+      background-color: #a3a8ab;
+      box-shadow: -1px 1px 0 0 #fff, 6px 0 0 0 #a3a8ab, 5px 1px 0 0 #fff, 12px 0 0 0 #a3a8ab, 11px 1px 0 0 #fff, 18px 0 0 0 #a3a8ab, 17px 1px 0 0 #fff, 24px 0 0 0 #a3a8ab, 23px 1px 0 0 #fff, 0px 6px 0 0 #a3a8ab, -1px 7px 0 0 #fff, 6px 6px 0 0 #a3a8ab, 5px 7px 0 0 #fff, 12px 6px 0 0 #a3a8ab, 11px 7px 0 0 #fff, 18px 6px 0 0 #a3a8ab, 17px 7px 0 0 #fff, 24px 6px 0 0 #a3a8ab, 23px 7px 0 0 #fff;
+      content: '';
     }
   }
 }
 
 .filter-set {
+  margin-bottom: 15px;
   border-bottom: 1px solid #d1d1d1;
+  .form-control {
+    margin-bottom: 10px;
+  }
 }

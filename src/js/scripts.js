@@ -1,9 +1,8 @@
 $(document).ready(function () {
 
-     $("select").selectize({create: !0, sortField: "text"}),
-     $(function () {
-     $('[data-toggle="tooltip"]').tooltip()
-     });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 
     (function ($) {
         $(window).load(function () {
@@ -40,5 +39,11 @@ $(document).ready(function () {
         }, resize: function (e, t) {
             t.originalElement.next().width(n - t.size.width)
         }
+    });
+
+    $(".menu-establishments li").click(function (e) {
+        e.preventDefault();
+        $(".menu-establishments li").removeClass('active');
+        $(this).addClass('active');
     })
 });

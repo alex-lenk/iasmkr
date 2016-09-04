@@ -6,13 +6,89 @@
             </h2>
         </div>
         <div class="scroll-container">
-            <select placeholder="Не выбрано">
-                <option value="">Не выбрано</option>
-                <option value="1">Chuck Testa</option>
-                <option value="4">Sage Cattabriga-Alosa</option>
-                <option value="3">Nikola Tesla</option>
-            </select>
+            <div class="select-box">
+                <div class="filter-set">
+                    <label for="select-first">Наборы сохранннных фильтров</label>
+                    <select class="form-control" id="select-first">
+                        <option value="0" disabled selected>Не выбрано</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label">Отображать только актуальные</span>
+                    </label>
+                </div>
+
+                <div class="name-list">
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label"></span>
+                    </label>
+                    <label for="filter-1" class="name">Округ</label>
+                    <select class="form-control" id="filter-1">
+                        <option value="0" disabled selected>Выбрать</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                </div>
+                <div class="name-list">
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label"></span>
+                    </label>
+                    <label for="filter-2" class="name">Комплексы</label>
+                    <select class="form-control" id="filter-2">
+                        <option value="0" disabled selected>Выбрать</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                </div>
+                <div class="name-list">
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label"></span>
+                    </label>
+                    <label for="filter-3" class="name">Ведомство</label>
+                    <select class="form-control" id="filter-3">
+                        <option value="0" disabled selected>Выбрать</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                </div>
+                <div class="name-list">
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label"></span>
+                    </label>
+                    <label for="filter-4" class="name">Тип учреждения</label>
+                    <select class="form-control" id="filter-4">
+                        <option value="0" disabled selected>Выбрать</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                </div>
+                <div class="name-list">
+                    <label class="label-block">
+                        <input type="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label"></span>
+                    </label>
+                    <label for="filter-5" class="name">Отрасль</label>
+                    <select class="form-control" id="filter-5">
+                        <option value="0" disabled selected>Выбрать</option>
+                        <option value="1">Первый пункт</option>
+                        <option value="2">Второй пункт</option>
+                        <option value="3">Третий пункт</option>
+                    </select>
+                </div>
+            </div>
         </div>
+
         <div class="bottom-block">
             <button type="button" class="btn btn-blue">Применить</button>
             <div class="rollup" data-toggle="tooltip" title="Сбросить фильтр"></div>
@@ -47,7 +123,7 @@
                 <li>ГБУК г.Москвы "Театр им. Моссовета"</li>
                 <li>ГБУК г. Москвы "ЦКД "Зеленоград"</li>
                 <li>ГАУК г.Москвы "Измайловский ПКиО"</li>
-                <li class="active">ЦПКиО им. М. Горького</li>
+                <li>ЦПКиО им. М. Горького</li>
                 <li>ГБУК ГДМ</li>
                 <li>ГБУК г. Москвы "Москонцерт"</li>
                 <li>ГБУК г. Москвы "Виртуозы Москвы"</li>

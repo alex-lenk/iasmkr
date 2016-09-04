@@ -15,19 +15,23 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     .title {
       @include font-size(14px);
       color: #000;
       font-weight: bold;
-      float: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .settings {
       margin: 0;
       padding: 0;
       list-style: none;
       text-align: right;
+      display: flex;
       li {
-        display: inline-block;
         &:not(:last-of-type) {
           margin-right: 20px;
         }

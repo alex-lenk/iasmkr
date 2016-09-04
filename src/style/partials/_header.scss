@@ -12,7 +12,7 @@
     @include clearfix;
     padding-top: 20px;
     @include from('xl') {
-      width: 255px;
+      width: 290px;
     }
     .logo {
       @include font-size(16px);
